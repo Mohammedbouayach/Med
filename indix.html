@@ -5,12 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
+  <link rel="preconnect"
+  href="https://fonts.googleapis.com">
+  <link
+  rel="preconnect" 
+  href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
+  rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <style>
   *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    font-family: 'Cairo', sans-serif;
     
   }
     body{
@@ -43,21 +51,22 @@
     }
 
     .title a{
-     color: #085816;
+     color: #0ef;
      letter-spacing: 0.5px;
      font-size: 22px;
      text-decoration: none;
-     border-bottom: 1px solid #085816;
-    
+     border-bottom: 1px solid #0ef;
+    font-weight: 700;
      border-width: 8px;
     
     }
     .content{
         margin-top: 10%;
+       
     }
     
     .cycle p{
-      color: greenyellow;
+      color: darkred;
       font-size: 18px;
     }
     
@@ -74,13 +83,13 @@
     }
     
     input:focus{
-      border: solid 2px  #63C54C;
+      border: solid 2px  #0ef;
     }
     
     button{
       padding: 4px;
       border: none;
-      background: green;
+      background: #0ef;
       width: 120px;
       margin-top: 7%;
       border-radius: 8px;
@@ -89,74 +98,108 @@
     }
     button:active{
       
-      background: #63C54C;
+      background: darkred;
     }
     .result{
       font-size: 22px;
-      color: whitesmoke;
+      color: maroon;
       margin-top: 20px;
-      background: green;
+      background: #0ef;
      
     }
     .service{
-      margin-top: 120px;
+      margin-top: 30px;
+      
     }
+    
     .barr{
-    background:black;
-    width: 60%;
-    height: 4px;
-    margin-bottom: 2px;
-    margin-top: 3px;
-    margin-left: 20px;
+    background:darkred;
+    width: 90%;
+    height: 2px;
+    margin-top: 4px;
+padding-left: 30px;
     
   }
   .bar{
-    background:black;
-    width: 45%;
-    height: 4px;
-    margin-bottom: 2px;
-    margin-top: 3px;
-    margin-left: 20px;
+    background:darkred;
+    width: 80%;
+    height: 2px;
+   margin-top: 4px;
+padding-left: 30px;
     transition: 0.3s;
   }
   .bar:hover{
-    width: 60%;
+    width: 90%;
   }
   .header{ position: sticky;
   top: 0;
     display: flex;
     justify-content: space-between;
-    background:white;
+    background:#fff;
     height: 40px;
     
   }
   .header h3 {
     margin-right: 12px;
-    color: #085816;
-    border-bottom: 1px solid #085816;
-    height: 30px;
+    color: #0ef;
+    letter-spacing: 2px;
+    border-bottom: 1px solid darkred;
+    height: 25px;
     border-width: 4px;
+    font-family: monospace;
+    font-weight: bold;
+    margin-top: 5px;
   
   }
   .icon{
     transition: 0.7s;
+    background: #0ef;
+    height: 26px;
+    padding-top: 2px;
+    border-radius: 20%;
+    margin-top: 5px;
+margin-left: 10px;
+padding-left: 4px;
+padding-right: 4px;
   }
-  .icon ul{
+  .icon ul{ 
     list-style:none ;
     position: absolute;
     left: 20px;
-    background: whitesmoke;
+   
    width: 200px;
    height: 160px;
    border-radius: 13%;
    display: none;
-   transition: 0.7s;
-  }
-  .icon ul li{
-    margin-top: 10px;
-  text-align: right;
-  transition: 0.6s;
+   z-index: 1;
+  animation-name: med;
 
+ animation-duration: 1.5s;
+  }
+
+@keyframes med{
+  0% {
+    
+    transform: translateZ(-00px) translateY(-50px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+  .icon ul li{
+    margin-top: 30px;
+    border: 1px solid #0ef;
+    background: #0ef;
+    border-radius: 50px;
+ 
+  text-align: center;
+  transition: 0.6s;
   }
   .icon ul li:hover{
     padding-right: 15px;
@@ -164,12 +207,10 @@
   
   .icon ul li a{
     text-decoration: none;
-    color: #085816;
+    color: darkred;
     
   }
-  .icon ul li:not(:last-child) {
-    border-bottom: 1px solid #085816;
-  }
+  
   .icon:hover ul{
     display: block;
    
@@ -177,12 +218,12 @@
   .bac{
     margin-top: 60px;
   }
-  .bac a{ color: #085816;
+  .bac a{ color: #0ef;
      letter-spacing: 0.5px;
      font-size: 22px;
      text-decoration: none;
-     border-bottom: 1px solid #085816;
-    
+     border-bottom: 1px solid #0ef;
+    font-weight: 700;
      border-width: 8px;
     
   }
@@ -192,7 +233,7 @@
     margin-top: 50px;
   }
   .math p{
-    color: greenyellow;
+    color: darkred;
       font-size: 18px;
       margin-left: 5px;
   }
@@ -211,7 +252,7 @@
     margin-top: 20px;
   }
   .pc p{
-    color: greenyellow;
+    color: darkred;
       font-size: 18px;
       margin-left: 5px;
   }
@@ -230,7 +271,7 @@
     margin-top: 20px;
   }
   .svt p{
-    color: greenyellow;
+    color: darkred;
       font-size: 18px;
       margin-left: 5px;
   }
@@ -249,7 +290,7 @@
     margin-top: 20px;
   }
   .ph p{
-    color: greenyellow;
+    color: darkred;
       font-size: 18px;
       margin-left: 5px;
   }
@@ -268,7 +309,7 @@
     margin-top: 20px;
   }
   .eng p{
-    color: greenyellow;
+    color: darkred;
       font-size: 18px;
       margin-left: 5px;
   }
@@ -283,56 +324,104 @@
   }
      #resu{
       font-size: 22px;
-      color: whitesmoke;
+      color: maroon;
       margin-top: 20px;
-      background: green;
+      background: #0ef;
      
     }
   #res{
     font-size: 22px;
-      color: whitesmoke;
+      color: maroon;
       margin-top: 20px;
-      background: green;
+      background: #0ef;
      
   }
   #regio{
     font-size: 22px;
-      color: whitesmoke;
+      color: maron;
       margin-top: 20px;
-      background: green;
+      background: #0ef;
      
   }
   .sl{
     text-decoration: none;
     margin-left: 30px;
-    color: green;
-    border-bottom: 1px solid green;
+    color: #0ef;
+    font-size:19px;
+    
     
   }
   .ss{
     text-decoration: none;
     margin-left: 30px;
     color: black;
-    border-bottom: 1px solid black;
-    
+    font-size:19px;
+  
   }
   
   .footer{
     background:white;
     margin-top: 10px;
-    display: flex;
+   
 
   }
-  .footer a{
-    text-decoration: none;
-    margin-left: 14px;
-    color: black;
+  .info{
+    display: block;
+    
+    width: 280px;
+    height: 100%;
+    margin-left: 30px;
+   
   }
-  .footer a span{
-  color: green;
+  .info img{
+    width: 130px;
+    height: 130px;
   }
+ .info p{
+   color: darkred;
+   font-size: 22px;
+ }
   html{
     scroll-behavior: smooth;
+  }
+  input:focus {
+    border: solid 2px #0ef;
+  }
+  .portfolio {
+    background:#1f242d;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+    
+  }
+  .portfolio p{
+    color: #fff;
+    position: absolute;
+    left: 140px;
+    margin-top: 15px;
+  }
+  .portfolio p span{
+    color: #0ef;
+    font-size: 17px;
+    font-weight: 700;
+    text-shadow: 0 10px 10px #0ef;
+  }
+.portfolio img{
+    width: 100px;
+    background: #0ef;
+    border-radius: 50%;
+    position: absolute;
+    right: 240px;
+    margin-top: 11px;
+    box-shadow: 0 10px 10px #0ef;
+    
+  }
+  .midia i{
+    font-size: 22px;
+    margin-left: 9px;
+    color: darkred;
   }
   </style>
 </head>
@@ -344,10 +433,14 @@
    
     <div class="container">
           <div class="icon">
+          
+             
         <div class="barr"></div>
            <div class="bar"></div>
               <div class="barr"></div>
+            
         <ul>
+          
           <li><a href="#ng">حساب النقطة الإجمالية</a></li>
           <li><a href="#np">pc نقطة الإمتحان الوطني</a></li>
           <li><a href="#ns">svtنقطة الإمتحان الوطني</a></li>
@@ -361,7 +454,15 @@
     <a href="indix.html" class="sl">علوم</a>
     <a href="indix1.html" class="ss">آدب</a>
     </div>
-     <h3>النجاح</h3>
+     <h3>Naja7</h3>
+  </div>
+  <div class="portfolio">
+    
+    <p>مرحبا بك في موقع <span>النجاح</span><br>الذي سيساعدك على حساب معدلك في الإمتحان الوطني و الجهوي</p>
+    <div class="imag">
+      <img src="vecteezy_3d-isolated-hand-with-things-about-education_11420266_38.png" alt="vecteezy_3d-isolated-hand-with-things-about-education_11420266_38.png">
+    </div>
+    
   </div>
   <div class="service" id="ng">
     
@@ -489,9 +590,9 @@
       <div class="svt">
         
         <input type="number" name="" id="r3">
-        <p>التاريخ و الجغرافيا</p>
+        <p>التاريخ الجغرافيا</p>
       </div>
-     <div class="ph">
+     <div class="ph">  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
        
                <input type="number" name="" id="r4">
                <p>التربية إسلامية</p>
@@ -504,9 +605,17 @@
     </div>
           </div>
    <div class="footer">
-     <a href="">télé: <span>0671870811</span></a>
-     <a href="">Gmail: <span>mrifi703@gmail.com</span></a>
-
+     <div class="info">
+       <img src="Picsart_23-06-15_12-57-36-820.png" alt="">
+       <h2>MOHAMMED BOUAYACH</h2>
+       <p>I am a programmer and web developer who holds a certificate in front-end web development earned in 2022. </p>
+       <div class="midia">
+         <i class='bx bxl-facebook-circle' ><i class='bx bxs-envelope' ></i></i>
+         <i class='bx bxl-instagram-alt'></i>
+         <i class='bx bxs-envelope' ></i>
+       </div>
+     </div>
+  
    </div>
       </div>
 <script src="main.js"></script>
