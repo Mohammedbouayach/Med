@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+    <link rel="preconnect"
+  href="https://fonts.googleapis.com">
+  <link
+  rel="preconnect" 
+  href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
+  rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    
+    
+  }
+    body{
+      text-align: center;
+      background: black;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(8px);
+      
+      
+    }
+    @media (min-width: 768px){
+      .con{
+        width: 750px;
+      }
+    }
+    @media (min-width: 992px){
+      .con{
+        width: 970px;
+      }
+    }
+    @media (min-width: 1200px){
+      .con{
+        width: 1170px;
+      }
+    }
+
+   .title a{
+     color: #0ef;
+     letter-spacing: 0.5px;
+     font-size: 22px;
+     text-decoration: none;
+     border-bottom: 1px solid #0ef;
+    font-weight: 700;
+     border-width: 8px;
+    
+    }
+    .content{
+        margin-top: 10%;
+    }
+    
+    .cycle p{
+      color: darkred;
+      font-size: 18px;
+    }
+    
+    .cycle input{
+      outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      padding: 4px;
+      text-align: center;
+      margin-top: 4%;
+      background: none;
+      color: green;
+      font-size: 20px;
+    }
+    
+    input:focus{
+      border: solid 2px  #0ef;
+    }
+    
+    button{
+      padding: 4px;
+      border: none;
+      background: #0ef;
+      width: 120px;
+      margin-top: 7%;
+      border-radius: 8px;
+      font-size: 18px;
+      color: #222;
+    }
+    button:active{
+      
+      background: darkred;
+    }
+    .result{
+      font-size: 22px;
+      color: maroon;
+      margin-top: 20px;
+      background: #0ef;
+     
+    }
+    .service{
+      margin-top: 30px;
+    }
+    .barr{
+    background:darkred;
+    width: 90%;
+    height: 2px;
+    margin-top: 4px;
+padding-left: 30px;
+    
+  }
+  .bar{
+    background:darkred;
+    width: 80%;
+    height: 2px;
+   margin-top: 4px;
+padding-left: 30px;
+    transition: 0.3s;
+  }
+  .bar:hover{
+    width: 90%;
+  }
+  .header{ position: sticky;
+  top: 0;
+    display: flex;
+    justify-content: space-between;
+    background:#fff;
+    height: 40px;
+    
+  }
+  .header h3 {
+    margin-right: 12px;
+    color: #0ef;
+    letter-spacing: 2px;
+    border-bottom: 1px solid darkred;
+    height: 25px;
+    border-width: 4px;
+    font-family: monospace;
+    font-weight: bold;
+  margin-top: 5px;
+  }
+  .icon{
+    transition: 0.7s;
+    background: #0ef;
+    height: 26px;
+    padding-top: 2px;
+    border-radius: 20%;
+    margin-top: 5px;
+margin-left: 10px;
+padding-left: 4px;
+padding-right: 4px;
+  }
+  .icon ul{ 
+    list-style:none ;
+    position: absolute;
+    left: 20px;
+   
+   width: 200px;
+   height: 160px;
+   border-radius: 13%;
+   display: none;
+   z-index: 1;
+  animation-name: med;
+
+ animation-duration: 1.5s;
+  }
+
+@keyframes med{
+  0% {
+    
+    transform: translateZ(-00px) translateY(-50px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+  .icon ul li{
+    margin-top: 30px;
+    border: 1px solid #0ef;
+    background: #0ef;
+    border-radius: 50px;
+ 
+  text-align: center;
+  transition: 0.6s;
+  }
+  .icon ul li:hover{
+    padding-right: 15px;
+  }
+  
+  .icon ul li a{
+    text-decoration: none;
+    color: darkred;
+    
+  }
+  
+  .icon:hover ul{
+    display: block;
+   
+  }
+  .icon:hover ul{
+    display: block;
+   
+  }
+    .sl  {
+      text-decoration: none;
+      margin-left: 30px;
+      color: #0ef;
+     font-size: 19px;
+      margin-right: 11px;
+    }
+    
+  
+    .bac{
+    margin-top: 60px;
+  }
+  .bac a{ color: #0ef;
+     letter-spacing: 0.5px;
+     font-size: 22px;
+     text-decoration: none;
+     border-bottom: 1px solid #0ef;
+    font-weight: 700;
+     border-width: 8px;
+    
+  }
+  .math{
+    display: flex;
+    margin-left:80px;
+    margin-top: 50px;
+  }
+  .math p{
+    color: darkred;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .math input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+      margin-right: px;
+  }
+  .pc{
+    display: flex;
+    margin-left:80px;
+    margin-top: 20px;
+  }
+  .pc p{
+    color: darkred;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .pc input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+     
+  }
+ .svt{
+    display: flex;
+    margin-left:80px;
+    margin-top: 20px;
+  }
+  .svt p{
+    color: darkred;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .svt input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+     
+  }
+  .ph{
+    display: flex;
+    margin-left:80px;
+    margin-top: 20px;
+  }
+  .ph p{
+    color: darkred;
+      font-size: 18px;
+      margin-left: 5px;
+  }
+  .ph input{
+    outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      text-align: center;
+      background: none;
+      color: green;
+     
+  }
+       #resu{
+      font-size: 22px;
+      color: maroon;
+      margin-top: 20px;
+      background: #0ef;
+     
+    }
+      #regio{
+    font-size: 22px;
+      color: maron;
+      margin-top: 20px;
+      background: #0ef;
+     
+  }
+  .footer{
+    background:white;
+    margin-top: 10px;
+   
+
+  }
+  .info{
+    display: block;
+    
+    width: 280px;
+    height: 100%;
+    margin-left: 30px;
+    border-width: 4px;
+  }
+  .info img{
+    width: 130px;
+    height: 130px;
+  }
+ .info p{
+   color: darkred;
+   font-size: 22px;
+ }
+  .ss{
+    color: black;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 19px;
+    
+    
+  }
+  input:focus {
+    border: solid 2px #0ef;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+    .portfolio {
+    background:#1f242d;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+    
+  }
+  .portfolio p{
+    color: #fff;
+    position: absolute;
+    left: 140px;
+    margin-top: 15px;
+  }
+  .portfolio p span{
+    color: #0ef;
+    font-size: 17px;
+    font-weight: 700;
+    text-shadow: 0 10px 10px #0ef;
+  }
+.portfolio img{
+    width: 100px;
+    background: #0ef;
+    border-radius: 50%;
+    position: absolute;
+    right: 240px;
+    margin-top: 11px;
+    box-shadow: 0 10px 10px #0ef;
+    
+  }
+   .midia i{
+    font-size: 22px;
+    margin-left: 9px;
+    color: darkred;
+  }
+    #ba9i{font-size: 22px;
+      color: maron;
+      margin-top: 20px;
+      background: #0ef;}
+      .title1{
+        margin-top: 20px;
+      }
+      .title1 a{
+        color: #0ef;
+     letter-spacing: 0.5px;
+     font-size: 22px;
+     text-decoration: none;
+     border-bottom: 1px solid #0ef;
+    font-weight: 700;
+     border-width: 8px;
+      }
+      .content p { color : darkred;
+        font-size: 18px;
+      }
+      .content input{ outline: none;
+      border: solid 1px grey;
+      border-radius: 8px;
+      
+      text-align: center;
+      margin-top: 4%;
+      background: none;
+      color: green;
+     
+        
+      }
+</style>
+<body>
+<div class="header">
+   
+    <div class="container">
+          <div class="icon">
+        <div class="barr"></div>
+           <div class="bar"></div>
+              <div class="barr"></div>
+        <ul>
+          <li><a href="#ng">حساب النقطة الإجمالية</a></li>
+          <li><a href="#NR">معدل الإمتحان الوطني الذي سيمكنني من النجاح</a></li>
+          <li><a href="#nn">نقطة الإمتحان الوطني</a></li>
+          <li><a href="#nr">نقطة الإمتحان الجهوي</a></li>
+         
+        </ul>
+      </div>
+    </div>
+   
+    <div class="sc">
+    <a href="indix.html" class="ss">علوم</a>
+    <a href="indix1.html" class="sl">آدب</a>
+    </div>
+     <h3>Naja7</h3>
+  </div>
+    <div class="portfolio">
+    
+    <p>مرحبا بك في موقع <span>النجاح</span><br>الذي سيساعدك على حساب معدلك في الإمتحان الوطني و الجهوي</p>
+    <div class="imag">
+      <img src="vecteezy_3d-isolated-hand-with-things-about-education_11420266_38.png" alt="vecteezy_3d-isolated-hand-with-things-about-education_11420266_38.png">
+    </div>
+    </div>
+    
+    <div class="service" id="ng">
+    
+  <form class="title">
+    <a href="">حساب النقطة الإجمالية</a>
+  </form>
+  <div class="result" id="result">
+    
+  </div>
+  
+  <div  class="content">
+
+
+<div class="cycle">
+  <p>نقطة المراقبة المستمرة
+  </p>
+  
+  <input type="number"  id="note1">
+  
+</div>
+<div class="cycle">
+  <p>نقطة الإمتحان الجهوي</p>
+  <input type="number" id="note2">
+
+</div>
+<div class="cycle">
+  <p> نقطة الإمتحان الوطني </p>
+  <input type="number" id="note3">
+
+</div>
+<div class="btn">
+<button onclick="note()" >إحسب</button>
+  
+  </div>
+  <form class="title1" id="NR">
+    <a href="">معدل الإمتحان الوطني الذي يمكنني من النجاح </a>
+  </form>
+  <div class="result" id="ba9i">
+    
+  </div>
+  
+  <div  class="content">
+
+
+  <p>نقطة المراقبة المستمرة
+  </p>
+
+  <input type="number"  id="ba9i1">
+  
+  <p>نقطة الإمتحان الجهوي</p>
+  <input type="number" id="ba9i2">
+<div class="btn">
+<button onclick="ba9()" >إحسب</button>
+</div>
+  <div class="bac" id="nn">
+      <a href="">نقطة الإمتحان الوطني </a>
+        <div class="result" id="resu">
+    
+  </div>
+      <div class="math">
+        
+        <input type="number" name="" id="nt1">
+       <p>العربية</p>
+      </div>
+      <div class="pc">
+        
+                <input type="number" name="" id="nt2">
+               <p>الإنجليزية</p>
+      </div>
+      <div class="svt">
+        
+        <input type="number" name="" id="nt3">
+        <p>التاريخ و الجغرافيا</p>
+      </div>
+     <div class="ph">
+       
+               <input type="number" name="" id="nt4">
+               <p>الفلسفة</p>
+     </div>
+    
+     </div>
+     
+       <button onclick="ntn()">إحسب</button>
+       
+    </div>
+      <div class="bac" id="nr">
+        <a href="">نقطة الإمتحان الجهوي</a>
+        <div class="result" id="regio">
+    
+        </div>
+        <div class="math">
+    
+          <input type="number" name="" id="r1">
+          <p>الرياضيات</p>
+        </div>
+        <div class="pc">
+    
+          <input type="number" name="" id="r2">
+          <p>الفرنسية</p>
+        </div>
+        <div class="svt">
+    
+          <input type="number" name="" id="r3">
+          <p>التربية إسلامية</p>
+        </div>
+    
+    
+        <button onclick="reg()">إحسب</button>
+    
+    
+      </div>
+      <div class="footer">
+         <div class="info">
+       <img src="Picsart_23-06-15_12-57-36-820.png" alt="">
+       <h2>MOHAMMED BOUAYACH</h2>
+       <p>I am a programmer and web developer who holds a certificate in front-end web development earned in 2022. </p>
+       <div class="midia">
+         <i class='bx bxl-facebook-circle' ><i class='bx bxs-envelope' ></i></i>
+         <i class='bx bxl-instagram-alt'></i>
+         <i class='bx bxs-envelope' ></i>
+       </div>
+     </div>
+   </div>
+  <script src="main1.js"></script>
+</body>
+
+</html>
